@@ -25,6 +25,7 @@ public class Quote {
 	@Column(name = "id", updatable = false, unique = true, nullable = false)
 	@NotNull
 	private LocalDate dtQuote;
+	
 	@NotNull
 	private BigDecimal value;
 }
