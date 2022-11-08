@@ -1,12 +1,10 @@
 package com.inatel.stockmanger.models;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.OffsetDateTime;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -18,13 +16,15 @@ import lombok.Setter;
 @Table(name="quote")
 @Getter
 @Setter
-public class Quote {
+public class Quote implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", updatable = false, unique = true, nullable = false)
 	@NotNull
-	private LocalDate dtQuote;
+	private OffsetDateTime dtQuote;
 	@NotNull
 	private BigDecimal value;
 }
