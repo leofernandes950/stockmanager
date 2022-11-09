@@ -1,4 +1,4 @@
-package com.inatel.stockmanger;
+package com.inatel.stockmanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

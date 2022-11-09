@@ -1,4 +1,4 @@
-package com.inatel.stockmanger.models.embeddable;
+package com.inatel.stockmanager.models.embeddable;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -8,7 +8,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.validation.constraints.NotNull;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Embeddable
+@Getter
+@Setter
 public class StockId implements Serializable{
 	
 	/**
