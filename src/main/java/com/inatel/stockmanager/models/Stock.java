@@ -1,16 +1,11 @@
 package com.inatel.stockmanager.models;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.time.OffsetDateTime;
 
-import javax.persistence.CascadeType;
-import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
+import javax.persistence.Id;
 import javax.persistence.Table;
-
-import com.inatel.stockmanager.models.embeddable.StockId;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -26,12 +21,8 @@ public class Stock implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@EmbeddedId
-	private StockId stockId;
-	
+	@Id
+	private String stockId;
 	private String description;
-	
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-	private Set<Quote> quotes;
-
+	private OffsetDateTime dtCadastro;
 }
