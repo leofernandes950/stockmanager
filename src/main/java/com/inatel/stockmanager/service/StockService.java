@@ -26,6 +26,11 @@ public class StockService {
 		stock.setDtCadastro(OffsetDateTime.now());
 		return this.repository.save(stock);
 	}
+	
+	@Transactional
+	public Stock salvar(Stock stock) {
+		return this.repository.save(stock);
+	}
 
 	public Optional<Stock> buscar(String stockId) {
 		return this.repository.findById(stockId);

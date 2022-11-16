@@ -24,5 +24,6 @@ public class Stock implements Serializable{
 	@Id
 	private String stockId;
 	private String description;
+	private boolean stockManaged;
 	private OffsetDateTime dtCadastro;
 }

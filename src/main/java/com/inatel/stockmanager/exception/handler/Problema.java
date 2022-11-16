@@ -1,5 +1,6 @@
 package com.inatel.stockmanager.exception.handler;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -11,8 +12,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Problema {
+public class Problema implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private LocalDateTime dataHora;
 	private String titulo;
 	private List<Campo> campos;
@@ -20,8 +25,12 @@ public class Problema {
 	
 	@Getter
 	@Setter
-	public static class Campo {
+	public static class Campo implements Serializable{
 		
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
 		public Campo(String nome, String mensagem) {
 			super();
 			this.nome = nome;
